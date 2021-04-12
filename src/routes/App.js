@@ -1,23 +1,23 @@
+import React from 'react'; 
+import {BrowserRouter, Route, Switch} from 'react-router-dom'; 
+import Animes from '../container/Animes'; 
+import Favoritos from '../container/Favoritos';
+import Layout from '../components/Layout';
 
+const App = () =>
+(
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+<BrowserRouter>
+
+<Layout>
+    <Switch>
+        <Route exact path="/favorites" component={Favoritos} />
+        <Route exact path="/" component={Animes} /> 
+    
+    </Switch>
+</Layout>
+</BrowserRouter>
+
+);
 
 export default App;
