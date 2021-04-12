@@ -2,12 +2,12 @@ import React from 'react';
 import ListaFavorito from './../components/ListaFavorito';
 
 
-const Favorites = () => 
+const Favoritos = () => 
 (
-<section>
+
 
     <ListaFavorito/>
-</section>
+
 )
 
-export default Favorites;
+export default Favoritos;

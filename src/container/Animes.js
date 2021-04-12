@@ -8,6 +8,6 @@ const Animes = () =>
 
     <AnimeLista/>
 </section>
-)
+);
 
 export default Animes;

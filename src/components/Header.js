@@ -18,31 +18,31 @@ return (
          <img 
          className= 'header__logo-img'
          src= {Logo}
-         alt='Rick and Morty Logo'
+         alt='Logo anime'
          />
      </figure>
      <nav className='header__nav'>
          <ul className = 'header__nav__options'>
              <li
-             onClick={() => handleSetSection('Characters')}
+             onClick={() => handleSetSection('Animes')}
              className= {`header__nav_option-item ${
 
-                sectionActive === 'Characters' ? 
+                sectionActive === 'Animes' ? 
                 'active' : ''
              }`}
              >
-            <Link to ='/'>Characters</Link>
+            <Link to ='/'>Animes</Link>
              </li>
              <li
             
-            onClick={() => handleSetSection('Favorites')}
+            onClick={() => handleSetSection('Favoritos')}
             className= {`header__nav__options-item ${
-                sectionActive === 'Favorites' ? 
+                sectionActive === 'Favoritos' ? 
                 'active' : ''
             }`} 
              
              >
-                <Link to = '/Favorites'>Favorites</Link> 
+                <Link to = '/Favoritos'>Favoritos</Link> 
              </li>
          </ul>
 
