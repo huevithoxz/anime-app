@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { setSection } from '../actions';
 import '../assets/styles/components/Header.scss'; 
-import Logo from '../assets/static/images/logo.png';
+import Logo from '../assets/static/images/logo.gif';
 
 const Header = (props) => {
   
@@ -16,9 +16,10 @@ return (
 <header>
      <figure >
          <img 
-         className= 'header__logo-img'
+         className= 'header__logo-img border-round shadow-1'
          src= {Logo}
          alt='Logo anime'
+         
          />
      </figure>
      <nav className='header__nav'>
@@ -41,7 +42,8 @@ return (
                 'active' : ''
             }`} 
              
-             >
+             > 
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                 <Link to = '/Favoritos'>Favoritos</Link> 
              </li>
          </ul>
