@@ -1,22 +1,25 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+
+import { useSelector, useDispatch } from 'react-redux';
 import { setSection } from '../actions';
 import '../assets/styles/components/Header.scss'; 
 import Logo from '../assets/static/images/logo.gif';
 
-const Header = (props) => {
+const Header = () => {
   
-    const {sectionActive} = props;
+    const sectionActive = useSelector((state) => state.sectionActive);
+    const dispatch = useDispatch();
+
     const handleSetSection = (section) => {
 
-        props.setSection(section)
+        dispatch(setSection(section));
     };
 return (
-<header>
-     <figure >
+<header className='header'>
+     <figure className='header__logo' >
          <img 
-         className= 'header__logo-img border-round shadow-1'
+         className= 'header__logo-img'
          src= {Logo}
          alt='Logo anime'
          
@@ -26,7 +29,7 @@ return (
          <ul className = 'header__nav__options'>
              <li
              onClick={() => handleSetSection('Animes')}
-             className= {`header__nav_option-item ${
+             className= {`header__nav__options-item ${
 
                 sectionActive === 'Animes' ? 
                 'active' : ''
@@ -43,7 +46,7 @@ return (
             }`} 
              
              > 
-              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+              
                 <Link to = '/Favoritos'>Favoritos</Link> 
              </li>
          </ul>
@@ -54,18 +57,7 @@ return (
 </header>
 );    
 };
-const mapStateToProps = (state) => {
 
-    return{
-        sectionActive : state.sectionActive,
 
-    };
-}
-
-const mapDispatchToProps = {
-
-    setSection
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
 
