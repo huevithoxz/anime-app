@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import propTypes from 'prop-types'; 
 import {setFavorite,deleteFavorite} from '../actions'; 
 import '../assets/styles/components/Anime.scss';
-import {ReactComponent as SVGStar} from '../assets/static/icons/star.svg';
+import  SVGStar from '../assets/static/icons/star.svg';
 import AnimeDetalle from './AnimeDetalle'; 
 import Modal from './Modal'
 import useModal from '../custom-hook/useModal'
